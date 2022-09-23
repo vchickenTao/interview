@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java从入门到放弃</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <link rel="shortcut icon" href="avator.jpg" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <!--目录分层收起-->
+    <!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />-->
+    <link rel="stylesheet" href="static/css/vue.css" id="thyme">
+    <link rel="stylesheet" href="static/css/gitalk.css">
+    <!-- 暗黑主题插件样式 -->
+    <link rel="stylesheet" href="static/css/style.min.css" id="dark">
+    <link rel="stylesheet" href="static/css/code.css">
+    <link rel="stylesheet" href="static/css/iconfont.css">
+
+    <style>
+        :root {
+            --docsifytabs-border-color: #ededed;
+            --docsifytabs-tab-highlight-color: green;
+        }
+
+        /*加重描述strong*/
+        .markdown-section strong {
+            color: rgb(239, 112, 96);
+        }
+
+        .app-nav {
+            position: fixed;
+            margin: 0;
+            /*padding: 10px 50px 10px 0;*/
+            padding: 10px 0 10px 0; /*上、右、下、左*/
+            width: calc(100% - 325px);
+            background-color: #fff;
+            height: 55px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .markdown-section code {
+            border-radius: 2px;
+            font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+            font-size: 16px !important;
+            margin: 0 2px;
+            padding: 3px 5px;
+            white-space: nowrap;
+        }
+
+        .markdown-section > div > img, .markdown-section pre {
+            box-shadow: 2px 2px 20px 6px rgb(255, 255, 255) !important;
+        }
+
+        .markdown-section a:not(:hover) {
+            text-decoration: none;
+        }
+
+
+        body {
+            margin: 0;
+
+        }
+
+        table tr td::before {
+            content: '' !important;
+        }
+
+        .app-nav {
+            color: #34495e !important;
+        }
+
+        .drag-me {
+            background: mediumspringgreen;
+            width: 52px;
+            height: 50px;
+            padding: 3px 9px;
+            position: fixed;
+            top: 20%;
+            right: 1%;
+            margin-left: -90px;
+            margin-top: -20px;
+            cursor: move;
+            cursor: -webkit-grab;
+            cursor: -moz-grab;
+            -moz-transition: box-shadow 0.2s;
+            -o-transition: box-shadow 0.2s;
+            -webkit-transition: box-shadow 0.2s;
+            transition: box-shadow 0.2s;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 50%;
+            z-index: 999;
+        }
+
+        .drag-me:hover {
+            -moz-box-shadow: #830f94 0 1px 3px;
+            -webkit-box-shadow: #830f94 0 1px 3px;
+            box-shadow: #830f94 0 1px 3px;
+        }
+
+        .drag-me:active {
+            cursor: move;
+            cursor: -webkit-grabbing;
+            cursor: -moz-grabbing;
+        }
+
+
+        .drag-me span {
+            color: #ffffff;
+            line-height: 42px;
+        }
+
+
+        #docsify-darklight-theme {
+            /*position: fixed;*/
+            top: 0px;
+        }
+
+
+        pre[class*=language-], pre code {
+            position: relative;
+            background-color: #282c34 !important;
+            border-radius: 10px;
+        }
+
+        .scroll-to-top {
+            background: #42b983 !important;
+            border-radius: 20% !important;
+            width: 40px !important;
+            height: 40px !important;
+            line-height: 37px !important;
+        }
+
+        .markdown-section code, .markdown-section output:after, .markdown-section pre {
+            font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace !important;
+        }
+
+        .markdown-section pre > code {
+            font-weight: initial;
+        }
+
+        pre code[class*=language-] {
+            color: #cccccc;
+        }
+
+        .markdown-section pre:before {
+            content: '';
+            display: block;
+            background: url(https://notebook.js.org/images/20220519-02-myinfo.png);
+            height: 30px;
+            background-size: 50px;
+            background-repeat: no-repeat;
+            background-position: 10px 15px;
+        }
+    </style>
+
+    <style type="text/css">
+        ::-webkit-scrollbar {
+            width: 10px; /*对垂直流动条有效*/
+            height: 10px; /*对水平流动条有效*/
+        }
+
+        /*定义滚动条的轨道颜色、内阴影及圆角*/
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+            border-radius: 3px;
+        }
+
+
+        /*定义滑块颜色、内阴影及圆角*/
+        ::-webkit-scrollbar-thumb {
+            border-radius: 7px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+            background-color: #E8E8E8;
+        }
+
+        /*定义两端按钮的样式*/
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        /*定义右下角汇合处的样式*/
+        ::-webkit-scrollbar-corner {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!--<div class="drag-me" title="点击切换主题">-->
+<!--    <span>主题</span>-->
+<!--</div>-->
+<div id="app">🦅 玩了命の加载中...</div>
+<script>
+    window.$docsify = {
+        name: '🐕 <span style="font-size: 22px!important;font-weight: bold;font-family: Droid Sans">Java从入门到放弃</span>',
+        // repo: 'https://github.com/vchickenTao',
+        search: {
+            maxAge: 86400000,
+            paths: 'auto',
+            placeholder: '🔍 搜索',
+            noData: '😞 没有结果!',
+            depth: 5
+        },
+        count: {
+            countable: true,
+            fontsize: '0.9em',
+            color: 'rgb(90,90,90)',
+            language: 'chinese'
+        },
+        // 切换页面后是否自动跳转到页面顶部
+        auto2top: true,
+        //代码一键复制
+        copyCode: {
+            buttonText: '复制',
+            errorText: '复制失败',
+            successText: '复制成功'
+        },
+        externalLinkTarget: '_blank', // 外部链接的打开方式，默认_blank
+        cornerExternalLinkTarget: '_blank', // 右上角链接的打开方式。默认为 _blank
+        routerMode: 'hash', // 路由方式 默认hash
+        notFoundPage: true, // 在找不到指定页面时加载_404.md
+        // loadSidebar: true,
+        subMaxLevel: 5,
+        loadNavbar: true,
+        coverpage: true,
+        onlyCover: true,
+        alias: {
+            // 定义路由别名，可以更自由的定义路由规则。 支持正则
+            '/.*/_sidebar.md': '/_sidebar.md',//防止意外回退
+            '/.*/_navbar.md': '/_navbar.md'
+        },
+        sidebarDisplayLevel: 1,
+        disqus: 'shortname',
+        'flexible-alerts': {
+            style: 'flat'
+        },
+        tabs: {
+            persist: true,      // default
+            sync: true,      // default
+            theme: 'classic', // default
+            tabComments: true,      // default
+            tabHeadings: true       // default
+        },
+
+        markdown: {
+            smartypants: true,
+            markdown: function (marked, renderer) {
+                // ...
+                return marked;
+            },
+        },
+        scrollToTop: {
+            auto: true,
+            text: '🔝',
+            right: 15,
+            bottom: 20,
+            offset: 500
+        },
+        plantuml: {
+            skin: 'default',
+        },
+        executeScript: true,
+        mergeNavbar: true,
+        formatUpdated: "更新于{YYYY}/{MM}/{DD} {HH}:{mm}:{ss}",
+        plugins: [
+            function (hook, vm) {
+                hook.beforeEach(function (html) {
+                    // var url = 'https://github.com/wugenqiang/CS-Notes/tree/master/' + vm.route.file
+                    // var editHtml = '[???? EDIT DOCUMENT](' + url + ')\n'
+                    // var editHtml_end = '[???? Edit Document](' + url + ')\n'
+                    // return editHtml
+                    //     + html
+                    //     + '\n----\n'
+                    //     + '> Last Modified {docsify-updated} '
+                    //     + editHtml_end
+                    var footer = [
+                        '<hr/>',
+                        '<footer>',
+                        '<span><a href="https://github.com/vchickenTao/repsitory">@vchicken</a> &copy;2022.</span>',
+                        '<span>  {docsify-updated}</span>',
+                        '<span style="margin-left: 10px;"><a href="https://docsify.js.org" target="_blank">Powered by docsify</a></span>',
+                        '</footer>'
+                    ].join('');
+                    return html + footer;
+                })
+            }
+        ],
+        themeColor: "#42b983", // 暗黑模式主题色
+        darklightTheme: {
+            siteFont: "",
+            defaultTheme: 'light',
+            codeFontFamily: 'Roboto Mono, Monaco, courier, monospace',
+            bodyFontSize: '15px',
+            dark: {
+                accent: '#42b983',
+                toogleBackground: '#ffffff',
+                background: '#000',
+                textColor: '#ffffff',
+                codeTextColor: '#ffffff',
+                codeBackgroudColor: '#0e2233',
+                borderColor: '#0d2538',
+                // blockQuoteColour: '#858585',
+                highlightColor: '#d22778',
+                sidebarSublink: '#b4b4b4',
+                codeTypeColor: '#ffffff',
+                coverBackground: 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(181, 100%, 85%) 100%)',
+                toogleImage: 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/sun.svg)'
+            },
+            light: {
+                accent: '#42b983',
+                toogleBackground: '#091a28',
+                background: '#ffffff',
+                textColor: '#34495e',
+                codeTextColor: '#ffffff',
+                codeBackgroudColor: '#f8f8f8',
+                borderColor: 'rgba(0, 0, 0, 0.07)',
+                blockQuoteColor: '#858585',
+                highlightColor: '#d22778',
+                // sidebarSublink: '#b4b4b4',
+                codeTypeColor: '#091a28',
+                coverBackground: 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(181, 100%, 85%) 100%)',
+                toogleImage: 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/moon.svg)'
+            }
+        },
+    }
+</script>
+<!-- Docsify v4 -->
+<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: 'Github Application Client ID',
+        clientSecret: 'Github Application Client Secret',
+        repo: 'https://github.com/vchickenTao/repsitory',
+        owner: 'Github repo owner',
+        admin: ['Github repo collaborators, only these guys can initialize github issues'],
+        // facebook-like distraction free mode
+        distractionFreeMode: false
+    })
+</script>
+<script src="static/js/index.min.js"></script>
+<!-- 暗黑主题切换插件 -->
+<!--不同代码的高亮-->
+<script src="static/js/prism-java.min.js"></script>
+<script src="static/js/external-script.min.js"></script>
+<script src="static/js/prism-cpp.min.js"></script>
+<script src="static/js/prism-bash.js"></script>
+<script src="static/js/prism-java.js"></script>
+<script src="static/js/prism-sql.js"></script>
+<script src="static/js/prism-bash.js"></script>
+<script src="static/js/prism-c.js"></script>
+<script src="static/js/components.js"></script>
+<script src="static/js/emoji.min.js"></script>
+<script src="static/js/search.min.js"></script>
+<script src="static/js/disqus.min.js"></script>
+<script src="static/js/docsify-pagination.min.js"></script>
+<script src="static/js/countable.js"></script>
+<script src="static/js/zoom-image.min.js"></script>
+<script src="static/js/prism-java.min.js"></script>
+<!--代码复制-->
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+<script src="static/js/docsify-remote-markdown.min.js"></script>
+<!--主题-->
+<script src="static/js/docsify-themeable.min.js"></script>
+<!--卜蒜子访问统计-->
+<script async src="static/js/busuanzi.pure.mini.js"></script>
+<!-- pdf-->
+<!-- PDFObject.js is a required dependency of this plugin -->
+<script src="static/js/pdfobject.min.js"></script>
+<!-- This is the source code of the pdf embed plugin -->
+<script src="path-to-file/docsify-pdf-embed.js"></script>
+<!-- or use this if you are not hosting the file yourself -->
+<script src="static/js/docsify-pdf-embed.js"></script>
+<!--  Tip-->
+<!-- Latest -->
+<script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+<!--Top-->
+<script src="static/js/docsify-scroll-to-top.min.js"></script>
+<!-- docsify-tabs (latest v1.x.x) -->
+<script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+<!--UML-->
+<script src="static/js/docsify-plantuml.min.js"></script>
+<link rel="stylesheet" href="static/css/mermaid.min.css">
+<script src="static/js/mermaid.min.js"></script>
+<!-- plugins -->
+<script src="static/js/docsify-sidebar-collapse.min.js"></script>
+<script src="http://vchicken.cn/note/static/js/jquery-3.6.0.min.js"></script>
+<script src="http://vchicken.cn/note/static/js/jquery-migrate.min.js"></script>
+<script src="static/js/jquery-ui.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+</body>
+</html>
