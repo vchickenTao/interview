@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Java从入门到放弃</title>
+    <title>Java面试宝典</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="description" content="Description">
-    <link rel="shortcut icon" href="avator.jpg" type="image/x-icon"/>
+    <link rel="shortcut icon" href="https://vue-admin-imgages.oss-cn-hangzhou.aliyuncs.com/2022-09-23/1d254f2f-24f5-43b1-8b1a-32d1d15a1db4_book.png" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <!--目录分层收起-->
-    <!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />-->
     <link rel="stylesheet" href="static/css/vue.css" id="thyme">
     <link rel="stylesheet" href="static/css/gitalk.css">
     <!-- 暗黑主题插件样式 -->
@@ -17,48 +16,9 @@
     <link rel="stylesheet" href="static/css/iconfont.css">
 
     <style>
-        :root {
-            --docsifytabs-border-color: #ededed;
-            --docsifytabs-tab-highlight-color: green;
-        }
-
-        /*加重描述strong*/
-        .markdown-section strong {
-            color: rgb(239, 112, 96);
-        }
-
-        .app-nav {
-            position: fixed;
-            margin: 0;
-            /*padding: 10px 50px 10px 0;*/
-            padding: 10px 0 10px 0; /*上、右、下、左*/
-            width: calc(100% - 325px);
-            background-color: #fff;
-            height: 55px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .markdown-section code {
-            border-radius: 2px;
-            font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
-            font-size: 16px !important;
-            margin: 0 2px;
-            padding: 3px 5px;
-            white-space: nowrap;
-        }
-
-        .markdown-section > div > img, .markdown-section pre {
-            box-shadow: 2px 2px 20px 6px rgb(255, 255, 255) !important;
-        }
-
-        .markdown-section a:not(:hover) {
-            text-decoration: none;
-        }
-
 
         body {
             margin: 0;
-
         }
 
         table tr td::before {
@@ -68,48 +28,6 @@
         .app-nav {
             color: #34495e !important;
         }
-
-        .drag-me {
-            background: mediumspringgreen;
-            width: 52px;
-            height: 50px;
-            padding: 3px 9px;
-            position: fixed;
-            top: 20%;
-            right: 1%;
-            margin-left: -90px;
-            margin-top: -20px;
-            cursor: move;
-            cursor: -webkit-grab;
-            cursor: -moz-grab;
-            -moz-transition: box-shadow 0.2s;
-            -o-transition: box-shadow 0.2s;
-            -webkit-transition: box-shadow 0.2s;
-            transition: box-shadow 0.2s;
-            -moz-border-radius: 2px;
-            -webkit-border-radius: 2px;
-            border-radius: 50%;
-            z-index: 999;
-        }
-
-        .drag-me:hover {
-            -moz-box-shadow: #830f94 0 1px 3px;
-            -webkit-box-shadow: #830f94 0 1px 3px;
-            box-shadow: #830f94 0 1px 3px;
-        }
-
-        .drag-me:active {
-            cursor: move;
-            cursor: -webkit-grabbing;
-            cursor: -moz-grabbing;
-        }
-
-
-        .drag-me span {
-            color: #ffffff;
-            line-height: 42px;
-        }
-
 
         #docsify-darklight-theme {
             /*position: fixed;*/
@@ -152,6 +70,44 @@
             background-repeat: no-repeat;
             background-position: 10px 15px;
         }
+
+        :root {
+            --docsifytabs-border-color: #ededed;
+            --docsifytabs-tab-highlight-color: green;
+        }
+
+        /*加重描述strong*/
+        .markdown-section strong {
+            color: rgb(239, 112, 96);
+        }
+
+        .app-nav {
+            position: fixed;
+            margin: 0;
+            /*padding: 10px 50px 10px 0;*/
+            padding: 10px 0 10px 0; /*上、右、下、左*/
+            width: calc(100% - 325px);
+            background-color: #fff;
+            height: 55px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .markdown-section code {
+            border-radius: 2px;
+            font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+            font-size: 16px !important;
+            margin: 0 2px;
+            padding: 3px 5px;
+            white-space: nowrap;
+        }
+
+        .markdown-section > div > img, .markdown-section pre {
+            box-shadow: 2px 2px 20px 6px rgb(255, 255, 255) !important;
+        }
+
+        .markdown-section a:not(:hover) {
+            text-decoration: none;
+        }
     </style>
 
     <style type="text/css">
@@ -192,7 +148,7 @@
 <div id="app">🦅 玩了命の加载中...</div>
 <script>
     window.$docsify = {
-        name: '🐕 <span style="font-size: 22px!important;font-weight: bold;font-family: Droid Sans">Java从入门到放弃</span>',
+        name: '📚 <span style="font-size: 22px!important;font-weight: bold;font-family: Droid Sans">Java面试宝典</span>',
         // repo: 'https://github.com/vchickenTao',
         search: {
             maxAge: 86400000,
@@ -352,7 +308,7 @@
 <script src="static/js/prism-c.js"></script>
 <script src="static/js/components.js"></script>
 <script src="static/js/emoji.min.js"></script>
-<script src="static/js/search.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 <script src="static/js/disqus.min.js"></script>
 <script src="static/js/docsify-pagination.min.js"></script>
 <script src="static/js/countable.js"></script>
@@ -369,7 +325,7 @@
 <!-- PDFObject.js is a required dependency of this plugin -->
 <script src="static/js/pdfobject.min.js"></script>
 <!-- This is the source code of the pdf embed plugin -->
-<script src="path-to-file/docsify-pdf-embed.js"></script>
+<script src="path-to-file/docsify-pdf-embed"></script>
 <!-- or use this if you are not hosting the file yourself -->
 <script src="static/js/docsify-pdf-embed.js"></script>
 <!--  Tip-->
