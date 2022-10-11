@@ -1,5 +1,6 @@
 # [🔖 **简历资源**](interview/简历)
-
+  - [Road2Coding](https://www.r2coding.com/#/README?id=%e7%ae%80%e5%8e%86%e7%9b%b8%e5%85%b3)
+---
 
 # [👨‍💻 **面试题**](interview/first)
 
@@ -36,5 +37,12 @@
 
 ## [Mysql常见问题汇总](interview/Mysql常见问题汇总)
 
-# 👕 友情链接
+---
+
+# 👕 **友情链接**
+
   - [面试题集合](https://www.r2coding.com/#/README?id=%e9%9d%a2%e8%af%95%e9%a2%98%e9%9b%86%e5%90%88)
+  - [Java全栈知识体系 - 面试题](https://www.pdai.tech/md/interview/x-interview.html)
+  - [JavaGuide](https://javaguide.cn/home.html#%E9%A1%B9%E7%9B%AE%E7%9B%B8%E5%85%B3)
+  - [路人张的面试笔记](https://javaguide.cn/home.html#%E9%A1%B9%E7%9B%AE%E7%9B%B8%E5%85%B3)
+  - 更多宝藏资源待发现...
