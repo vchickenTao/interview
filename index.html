@@ -16,13 +16,14 @@
     <link rel="stylesheet" href="static/css/iconfont.css">
 
     <style>
-
-        body {
-            margin: 0;
+        :root {
+            --docsifytabs-border-color: #ededed;
+            --docsifytabs-tab-highlight-color: green;
         }
 
-        table tr td::before {
-            content: '' !important;
+        /*加重描述strong*/
+        .markdown-section strong {
+            color: rgb(239, 112, 96);
         }
 
         #main li{
@@ -30,9 +31,88 @@
         }
 
         .app-nav {
-            color: #34495e !important;
+            position: fixed;
+            margin: 0;
+            /*padding: 10px 50px 10px 0;*/
+            padding: 10px 0 10px 0; /*上、右、下、左*/
+            width: calc(100% - 325px);
+            background-color: #fff;
+            height: 55px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .markdown-section code {
+            border-radius: 2px;
+            font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+            font-size: 16px !important;
+            margin: 0 2px;
+            padding: 3px 5px;
+            white-space: nowrap;
+        }
+
+        .markdown-section > div > img, .markdown-section pre {
+            box-shadow: 2px 2px 20px 6px rgb(255, 255, 255) !important;
+        }
+
+        .markdown-section a:not(:hover) {
+            text-decoration: none;
+        }
+
+
+        body {
+            margin: 0;
 
         }
+
+        table tr td::before {
+            content: '' !important;
+        }
+
+        .app-nav {
+            color: #34495e !important;
+        }
+
+        .drag-me {
+            background: mediumspringgreen;
+            width: 52px;
+            height: 50px;
+            padding: 3px 9px;
+            position: fixed;
+            top: 20%;
+            right: 1%;
+            margin-left: -90px;
+            margin-top: -20px;
+            cursor: move;
+            cursor: -webkit-grab;
+            cursor: -moz-grab;
+            -moz-transition: box-shadow 0.2s;
+            -o-transition: box-shadow 0.2s;
+            -webkit-transition: box-shadow 0.2s;
+            transition: box-shadow 0.2s;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 50%;
+            z-index: 999;
+        }
+
+        .drag-me:hover {
+            -moz-box-shadow: #830f94 0 1px 3px;
+            -webkit-box-shadow: #830f94 0 1px 3px;
+            box-shadow: #830f94 0 1px 3px;
+        }
+
+        .drag-me:active {
+            cursor: move;
+            cursor: -webkit-grabbing;
+            cursor: -moz-grabbing;
+        }
+
+
+        .drag-me span {
+            color: #ffffff;
+            line-height: 42px;
+        }
+
 
         #docsify-darklight-theme {
             /*position: fixed;*/
@@ -75,43 +155,9 @@
             background-repeat: no-repeat;
             background-position: 10px 15px;
         }
-
-        :root {
-            --docsifytabs-border-color: #ededed;
-            --docsifytabs-tab-highlight-color: green;
-        }
-
-        /*加重描述strong*/
-        .markdown-section strong {
-            color: rgb(239, 112, 96);
-        }
-
-        .app-nav {
-            position: fixed;
-            margin: 0;
-            /*padding: 10px 50px 10px 0;*/
-            padding: 10px 0 10px 0; /*上、右、下、左*/
-            width: calc(100% - 325px);
-            background-color: #fff;
-            height: 55px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .markdown-section code {
-            border-radius: 2px;
-            font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
-            font-size: 16px !important;
-            margin: 0 2px;
-            padding: 3px 5px;
-            white-space: nowrap;
-        }
-
-        .markdown-section > div > img, .markdown-section pre {
-            box-shadow: 2px 2px 20px 6px rgb(255, 255, 255) !important;
-        }
-
-        .markdown-section a:not(:hover) {
-            text-decoration: none;
+        hr{
+            height: 2px;
+            background: #3eaf7c;
         }
     </style>
 
@@ -255,7 +301,7 @@
             dark: {
                 accent: '#42b983',
                 toogleBackground: '#ffffff',
-                background: '#000',
+                background: '#333333',
                 textColor: '#ffffff',
                 codeTextColor: '#ffffff',
                 codeBackgroudColor: '#0e2233',
